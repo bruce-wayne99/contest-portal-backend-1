@@ -1,6 +1,6 @@
 import Question from '../models/Question'
 import Submission from '../models/Submission'
-import Comment from '../models/Comment'
+//import Comment from '../models/Comment'
 
 export async function get(ctx) {
   const { qno } = ctx.params
