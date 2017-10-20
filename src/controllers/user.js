@@ -1,9 +1,14 @@
+import User from '../models/User'
+
 export async function create(ctx) {
   ctx.body = 'Create user'
 }
 
 export async function get(ctx) {
-  ctx.body = `Get user ${ctx.params.id}`
+  const { id } = ctx.params
+  ctx.body = await User.findOne({
+    where: { id },
+  })
 }
 
 export async function del(ctx) {
