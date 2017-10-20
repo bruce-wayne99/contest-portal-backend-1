@@ -11,6 +11,12 @@ export async function get(ctx) {
   })
 }
 
+export async function getAll(ctx) {
+  ctx.body = await User.findAll({
+    attributes: { exclude: [ 'maxUnlock' ] }
+  })
+}
+
 export async function del(ctx) {
   ctx.body = 'Delete user'
 }

@@ -24,6 +24,11 @@ const routes = [
       }
     }
   },
+  {
+    method: 'get',
+    path: '/',
+    handler: [ isAuthenticated, ctrl.getAll ],
+  },
 ];
 
 router.route(routes);
