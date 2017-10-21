@@ -35,6 +35,10 @@ const Question = db.define('question', {
       notEmpty: true,
     }
   },
+  image: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
 });
 
 export default Question
