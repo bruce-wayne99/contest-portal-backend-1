@@ -24,7 +24,16 @@ export async function checkAnswer(ctx) {
     const { user } = ctx.state
     if (user.maxUnlock == qno) {
       user.maxUnlock += 1
-      user.score += 20
+      if(qno <= 3)
+        user.score += 20
+      else if(qno <= 6) 
+        user.score += 40
+      else if(qno <=10)
+        user.score += 70
+      else if(qno <=15)
+        user.score += 100
+      else
+        user.score += 150
       await user.save()
     }
     ctx.body = { response: true }
