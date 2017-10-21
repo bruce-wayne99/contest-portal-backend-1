@@ -39,20 +39,6 @@ const routes = [
     path: '/',
     handler: [ isAuthenticated, ctrl.getAll ],
   },
-  {
-    method: 'post',
-    path: '/:qno',
-    handler: [ isAuthenticated, ctrl.addcomment ],
-    validate: {
-      params: {
-        qno: Joi.number()
-      },
-      type: 'form',
-      body: {
-        comment: Joi.string(),
-      }
-    }
-  },
 ];
 
 router.route(routes);
