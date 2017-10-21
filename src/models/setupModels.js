@@ -14,9 +14,9 @@ export default async function setupModels() {
   ]);
   await Question.sync({ force: true })
   await Question.bulkCreate([
-    { qno: 1, title: 'QTitle 1', body: 'QBody 1', answer: JSON.stringify(['1','2','3'])},
-    { qno: 2, title: 'QTitle 2', body: 'QBody 2', answer: JSON.stringify(['2'])},
-    { qno: 3, title: 'QTitle 3', body: 'QBody 3', answer: JSON.stringify(['1','4'])},
+    { qno: 1, title: 'QTitle 1', body: 'QBody 1', answer: JSON.stringify(['1','2','3']), image: '/static/media/iiit.699e5337.png'},
+    { qno: 2, title: 'QTitle 2', body: 'QBody 2', answer: JSON.stringify(['2']), image: '/static/media/felicity.36d151be.png'},
+    { qno: 3, title: 'QTitle 3', body: 'QBody 3', answer: JSON.stringify(['1','4']), image: '/static/media/felicity1.a8112692.jpg'},
     { qno: 4, title: 'QTitle 4', body: 'QBody 4', answer: JSON.stringify(['3'])},
     { qno: 5, title: 'QTitle 5', body: 'QBody 5', answer: JSON.stringify(['4'])},
     { qno: 6, title: 'QTitle 6', body: 'QBody 6', answer: JSON.stringify(['4'])},
